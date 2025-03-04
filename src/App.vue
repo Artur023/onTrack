@@ -1,5 +1,10 @@
 <script setup>
-import { CheckCircleIcon } from '@heroicons/vue/24/solid';
+import {
+  ChartBarIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  ListBulletIcon,
+} from '@heroicons/vue/24/solid';
 </script>
 
 <template>
@@ -20,62 +25,91 @@ import { CheckCircleIcon } from '@heroicons/vue/24/solid';
       </div>
     </a>
   </header>
-  <main class="dark:color-primary-500">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis
-    dignissimos dolorem dolores incidunt maiores modi molestiae mollitia nobis
-    obcaecati quae quas, quod vitae? Aspernatur ipsam, magnam sed vero voluptas
-    voluptatem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-    adipisci aliquam amet doloribus eos facilis impedit incidunt, laborum non,
-    quasi quos repudiandae sed tempora vel voluptatem? Dignissimos excepturi
-    fugiat laudantium minus quaerat quibusdam ratione reiciendis reprehenderit
-    sunt unde! Aut consectetur exercitationem harum hic impedit ipsa itaque
-    saepe ut vel voluptatem. Architecto distinctio ipsa natus quod totam, unde
-    vel! A animi delectus ipsa magnam mollitia officia quasi quia repellat,
-    tempore voluptas. Accusantium alias animi consectetur consequuntur culpa cum
-    deleniti deserunt dignissimos, dolore eaque enim error eum ex exercitationem
-    facilis impedit incidunt labore libero nam nesciunt non perspiciatis quaerat
-    sit voluptatem voluptates! Lorem ipsum dolor sit amet, consectetur
-    adipisicing elit. Architecto atque consequuntur debitis dolorem ex fuga id
-    molestias, nobis provident sequi similique tempora tempore, veniam. A fugiat
-    hic illum non odit, optio provident ratione reprehenderit saepe tempore!
-    Architecto debitis deleniti doloribus dolorum, expedita fuga, fugiat harum
-    illo laborum nulla provident, qui quidem sit ut voluptates. Ab accusantium,
-    ad adipisci, aliquam aliquid ducimus enim eveniet explicabo fugiat incidunt
-    iure laboriosam, nisi non obcaecati officiis repellendus sequi sunt velit
-    veniam vitae voluptas voluptate voluptates. Dignissimos, expedita facere
-    fuga laboriosam qui velit voluptate! Accusantium aliquam amet atque
-    doloribus enim eos molestias nulla quam repellendus unde. Accusantium,
-    delectus dicta eos facere laboriosam maxime placeat porro possimus quaerat
-    qui sunt voluptate voluptates voluptatibus! Ab accusamus asperiores
-    assumenda autem, blanditiis cumque delectus doloremque, eveniet ex fuga
-    iure, laborum officia omnis quaerat quas recusandae suscipit tenetur velit!
-    Adipisci animi aperiam consectetur cum, dolore doloremque eligendi est
-    eveniet exercitationem facilis fugit id in ipsa ipsum iure laborum magni
-    molestiae natus nemo neque obcaecati odio pariatur placeat praesentium
-    quaerat quas quo quos ratione rem, repellat repudiandae sapiente sed sit
-    veniam veritatis voluptates voluptatum? Alias assumenda est et omnis quaerat
-    sit vel! Aut commodi delectus excepturi expedita fugit laboriosam
-    perspiciatis quia repellat! A ad, aut deleniti, distinctio dolorum ea earum
-    enim, eos harum id ipsam provident reprehenderit sit veritatis voluptates.
-    Adipisci aliquid amet consequuntur, cum cupiditate dicta eius eligendi
-    excepturi facere facilis hic incidunt inventore natus nisi pariatur
-    similique sunt. Aperiam autem eligendi eos est hic quam, velit. Commodi
-    culpa, deserunt ducimus error hic illum impedit iusto magni mollitia officia
-    quasi saepe sunt suscipit unde vitae voluptates voluptatum. At atque
-    deleniti distinctio nobis, saepe soluta ullam velit. Consequatur dolore
-    ipsum modi nobis praesentium quidem recusandae rerum! At eaque est impedit
-    perspiciatis quaerat repellat sed! Atque eaque earum hic id minus molestias
-    mollitia obcaecati sunt. Autem consequuntur cupiditate, error eum labore
-    obcaecati officia perspiciatis repudiandae! Accusamus animi architecto
-    consequuntur eligendi fugit illum magnam praesentium quo! A accusamus amet
-    aperiam, consequuntur corporis cum doloremque ducimus eius eveniet expedita
-    explicabo facere fuga id ipsam minima minus, necessitatibus nemo nihil
-    numquam provident quam quas reiciendis reprehenderit rerum sed sequi soluta
-    tempora. Accusantium atque consectetur culpa cumque debitis delectus dicta
-    dolore, dolores error exercitationem explicabo facilis ipsa labore magni
-    maxime nobis officiis pariatur praesentium qui quibusdam recusandae sit
-    soluta suscipit totam unde velit veritatis voluptates. Aperiam debitis
-    dignissimos dolor laudantium neque nulla rerum. Numquam perspiciatis,
-    voluptatibus?
+  <main class="flex flex-grow flex-col">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci
+    architecto dolore esse ex excepturi expedita fugiat fugit illum inventore
+    iure magnam magni minima minus nam neque nulla odit pariatur quae quasi
+    quibusdam sequi sint sit, unde veritatis vitae, voluptatum? A atque commodi
+    dolor ducimus eum in molestias natus obcaecati optio, perferendis
+    praesentium quam, quas sed tempora voluptate voluptatibus voluptatum? A
+    aperiam aut culpa cumque cupiditate debitis delectus dicta dolore dolorem ea
+    et expedita explicabo inventore labore laudantium molestiae mollitia
+    necessitatibus nisi, nobis, optio placeat porro quisquam quod quos ratione
+    recusandae rem repellendus, saepe temporibus totam vel vero vitae voluptate!
+    A adipisci alias animi aut autem beatae cumque, debitis dignissimos ducimus
+    ea excepturi expedita fuga minima, molestias non officiis placeat quae quas
+    qui quidem, quisquam soluta vel voluptates! Eum facere iste sequi tenetur
+    voluptatem. Adipisci animi blanditiis debitis delectus distinctio doloribus
+    dolorum error eveniet fugit illum magnam maxime modi, mollitia
+    necessitatibus neque optio perspiciatis quaerat qui quo recusandae rem rerum
+    sapiente sequi sint ullam ut voluptas! Accusamus animi architecto aspernatur
+    atque cupiditate distinctio ducimus eveniet exercitationem, explicabo maxime
+    minus nulla odio pariatur provident soluta vel veritatis! Molestiae quaerat
+    sapiente sequi voluptates! Aspernatur dolor enim error exercitationem fuga
+    labore laudantium molestias necessitatibus, non, perspiciatis quas,
+    quibusdam quidem quos sequi sint veritatis voluptate voluptates! Accusantium
+    at deleniti deserunt molestiae nemo rerum unde. Ab architecto asperiores at
+    atque deleniti deserunt dolore expedita iusto maxime nihil odit provident
+    quasi, quisquam repellat rerum suscipit ullam. Assumenda dolorum ea fuga
+    molestias necessitatibus provident quisquam reprehenderit rerum, voluptas!
+    Amet aperiam aut doloremque dolorum earum, hic iusto libero mollitia quidem
+    veritatis vitae voluptas? Adipisci animi asperiores beatae deserunt
+    dignissimos distinctio dolor exercitationem harum incidunt iusto
+    necessitatibus, nisi odio porro repellat, sed sit voluptatibus. Aspernatur
+    aut dolore exercitationem expedita iusto, nisi repellendus sint totam ullam!
+    Blanditiis corporis, ea fugit id nesciunt non officia omnis quaerat,
+    recusandae repellendus, repudiandae rerum totam. Consequatur cumque harum
+    natus obcaecati perferendis, possimus reiciendis. Ab aliquam aliquid
+    aspernatur at aut doloremque earum enim esse et fugiat illo illum ipsam
+    iusto labore maiores quas qui quidem quisquam recusandae reiciendis rem
+    rerum saepe sequi soluta tenetur, vero voluptatum? A ab cupiditate,
+    doloribus, fugit itaque nam necessitatibus, numquam porro quaerat quidem
+    quisquam reiciendis saepe soluta ullam velit. Amet corporis debitis ea
+    eligendi eveniet facere fugiat id maxime nisi nobis, suscipit, ut? Aut
+    consequatur ea earum excepturi inventore laborum, sunt. A ad beatae delectus
+    distinctio dolores exercitationem facilis illum laborum reiciendis sunt.
+    Aliquid amet aspernatur autem, delectus deleniti doloremque excepturi hic
+    inventore laudantium maiores, modi nihil nobis perferendis perspiciatis
+    praesentium, quo recusandae repudiandae sint sunt temporibus. Accusantium
+    aperiam aspernatur, aut consequatur cupiditate eaque illum impedit ipsa
+    laboriosam laborum molestiae natus odio odit, omnis, perferendis porro saepe
+    sequi sint. Aliquam asperiores consequatur dolorum exercitationem, magni
+    quas veritatis voluptas! Aperiam dolores dolorum eum explicabo pariatur
+    quaerat quia quos. Accusantium asperiores consequatur consequuntur cum
+    debitis dignissimos distinctio dolorum earum eius fugit harum ipsam labore
+    minus necessitatibus odio officiis placeat, porro quibusdam, quisquam quod
+    reiciendis saepe sapiente similique soluta tenetur vero voluptate?
+    Doloribus!
   </main>
+  <nav class="sticky bottom-0 z-10 bg-white text-3xl">
+    <ul class="flex items-center justify-around border-t">
+      <li class="flex-1">
+        <a
+          class="flex flex-col items-center p-2 text-xs capitalize"
+          href="#timeline"
+        >
+          <ClockIcon class="h-6 w-6" />
+          timeline</a
+        >
+      </li>
+      <li class="flex-1">
+        <a
+          class="flex flex-col items-center p-2 text-xs capitalize"
+          href="#activities"
+        >
+          <ListBulletIcon class="h-6 w-6" />
+          activities</a
+        >
+      </li>
+      <li class="flex-1">
+        <a
+          class="flex flex-col items-center p-2 text-xs capitalize"
+          href="#progress"
+        >
+          <ChartBarIcon class="h-6 w-6" />
+          progress
+        </a>
+      </li>
+    </ul>
+  </nav>
 </template>
