@@ -1,10 +1,12 @@
 <script setup>
 import {
-  ChartBarIcon,
   CheckCircleIcon,
   ClockIcon,
   ListBulletIcon,
+  ChartBarIcon,
 } from '@heroicons/vue/24/solid';
+
+const navList = ['timeline', 'activities', 'progress'];
 </script>
 
 <template>
@@ -12,9 +14,9 @@ import {
     class="sticky top-0 z-20 flex items-center justify-between border-b bg-white p-3"
   >
     <a href="#">
-      <img src="./assets/logo.png" alt="logo" class="h-20" />
+      <img alt="logo" class="h-20" src="./assets/logo.png" />
     </a>
-    <a href="#" class="text-sm">
+    <a class="text-sm" href="#">
       <div v-if="true" class="flex items-center gap-1">
         Day complite!
         <CheckCircleIcon class="h-7 text-green-800" />
@@ -83,31 +85,15 @@ import {
   </main>
   <nav class="sticky bottom-0 z-10 bg-white text-3xl">
     <ul class="flex items-center justify-around border-t">
-      <li class="flex-1">
+      <li v-for="page in navList" key="page" class="flex-1">
         <a
+          :href="`#${page}`"
           class="flex flex-col items-center p-2 text-xs capitalize"
-          href="#timeline"
         >
-          <ClockIcon class="h-6 w-6" />
-          timeline</a
-        >
-      </li>
-      <li class="flex-1">
-        <a
-          class="flex flex-col items-center p-2 text-xs capitalize"
-          href="#activities"
-        >
-          <ListBulletIcon class="h-6 w-6" />
-          activities</a
-        >
-      </li>
-      <li class="flex-1">
-        <a
-          class="flex flex-col items-center p-2 text-xs capitalize"
-          href="#progress"
-        >
-          <ChartBarIcon class="h-6 w-6" />
-          progress
+          <ClockIcon v-if="page === 'timeline'" class="h-6 w-6" />
+          <ListBulletIcon v-else-if="page === 'activities'" class="h-6 w-6" />
+          <ChartBarIcon v-else class="h-6 w-6" />
+          {{ page }}
         </a>
       </li>
     </ul>
