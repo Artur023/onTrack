@@ -6,16 +6,20 @@ defineProps({
   selected: {
     type: Number,
   },
-  options: {
-    type: Array,
-    required: true,
-  },
   placeholder: {
     type: String,
     required: true,
   },
+  options: {
+    type: Array,
+    required: true,
+    validator(options) {
+      return options.every(
+        ({ value, label }) => typeof value === 'number' && typeof label === 'string',
+      );
+    },
+  },
 });
-
 </script>
 
 <template>
