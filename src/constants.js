@@ -1,4 +1,4 @@
-import { ChartBarIcon, ClockIcon, ListBulletIcon } from '@heroicons/vue/24/solid/index.js';
+import { ChartBarIcon, ClockIcon, ListBulletIcon } from '@heroicons/vue/24/outline/index.js';
 
 export const PAGE_TIMELINE = 'timeline';
 export const PAGE_ACTIVITIES = 'activities';
