@@ -1,7 +1,9 @@
 <script setup>
 import TimelineItem from '@/components/TimelineItem.vue';
 
-defineProps(['timelineItems']);
+defineProps({
+  timelineItems: { type: Array, required: true },
+});
 </script>
 
 <template>

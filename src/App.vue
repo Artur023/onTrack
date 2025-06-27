@@ -8,7 +8,6 @@ import TheProgress from '@/pages/TheProgress.vue';
 import { PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE } from '@/constants.js';
 import { ref } from 'vue';
 import { generateTimelineItems, normalizePageHash } from '@/functions.js';
-
 function goTo(page) {
   currentPage.value = page;
 }
