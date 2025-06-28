@@ -10,7 +10,9 @@ defineProps({
     validator: isPageValid,
   },
 });
-defineEmits(['navigate']);
+const emit = defineEmits({
+  navigate: isPageValid,
+});
 </script>
 
 <template>
@@ -21,7 +23,7 @@ defineEmits(['navigate']);
         :key="page"
         :class="{ 'pointer-events-none bg-gray-200': page === currentPage }"
         :href="`#${page}`"
-        @click="$emit('navigate', page)"
+        @click="emit('navigate', page)"
       >
         <component :is="icon" class="h-6 w-6" />
         {{ page }}
