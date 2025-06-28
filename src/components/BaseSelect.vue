@@ -1,7 +1,7 @@
 <script setup>
 import { XMarkIcon } from '@heroicons/vue/24/outline/index.js';
 import BaseButton from '@/components/BaseButton.vue';
-import { isOptionsValid } from '@/validators.js';
+import { validateSelectOptions } from '@/validators.js';
 
 defineProps({
   selected: {
@@ -14,7 +14,7 @@ defineProps({
   options: {
     type: Array,
     required: true,
-    validator: isOptionsValid,
+    validator: validateSelectOptions,
   },
 });
 </script>

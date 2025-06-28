@@ -1,6 +1,5 @@
 <script setup>
 import BaseSelect from '@/components/BaseSelect.vue';
-import { HOURS_IN_DAY } from '@/constants.js';
 import { isTimeLineItemValid } from '@/validators.js';
 
 const props = defineProps({
