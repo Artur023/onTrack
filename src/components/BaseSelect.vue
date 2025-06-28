@@ -1,6 +1,7 @@
 <script setup>
 import { XMarkIcon } from '@heroicons/vue/24/outline/index.js';
 import BaseButton from '@/components/BaseButton.vue';
+import { isOptionsValid } from '@/validators.js';
 
 defineProps({
   selected: {
@@ -13,11 +14,7 @@ defineProps({
   options: {
     type: Array,
     required: true,
-    validator(options) {
-      return options.every(
-        ({ value, label }) => typeof value === 'number' && typeof label === 'string',
-      );
-    },
+    validator: isOptionsValid,
   },
 });
 </script>
