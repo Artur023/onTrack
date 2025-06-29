@@ -15,8 +15,8 @@ export function isTimeLineItemValid({ hour }) {
   return isHourValid(hour);
 }
 
-function isHourValid(value) {
-  return isNumber(value) && isBetween(value, MIDNIGHT_HOUR, HOURS_IN_DAY - 1);
+export function isHourValid(hour) {
+  return isNumber(hour) && isBetween(hour, MIDNIGHT_HOUR, HOURS_IN_DAY - 1);
 }
 
 export function isNumberOrNull(value) {
