@@ -9,6 +9,7 @@ defineProps({
     validator: validateActivities,
   },
 });
+
 </script>
 
 <template>

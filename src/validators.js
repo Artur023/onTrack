@@ -1,4 +1,4 @@
-import { HOURS_IN_DAY, MIDNIGHT_HOUR, NAV_ITEMS } from '@/constants.js';
+import { BUTTON_TYPES, HOURS_IN_DAY, MIDNIGHT_HOUR, NAV_ITEMS } from '@/constants.js';
 
 export function validateSelectOptions(options) {
   return options.every(isSelectOptionValid);
@@ -6,6 +6,10 @@ export function validateSelectOptions(options) {
 
 export function isPageValid(page) {
   return Object.keys(NAV_ITEMS).includes(page);
+}
+
+export function isButtonTypeValid(type) {
+  return Object.keys(BUTTON_TYPES).includes(type);
 }
 
 export function isTimeLineItemsValid(timelineItems) {
