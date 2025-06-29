@@ -31,7 +31,7 @@ const isNotSelected = computed(() => isUndefinedOrNull(props.selected));
     </BaseButton>
     <select
       class="w-full truncate rounded bg-gray-100 px-2 py-1 text-2xl"
-      @change="emit('select', $event.target.value)"
+      @change="emit('select', +$event.target.value)"
     >
       <option :selected="isNotSelected" disabled value="">
         {{ placeholder }}

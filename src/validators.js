@@ -23,6 +23,17 @@ export function isNumberOrNull(value) {
   return isNumber(value) || isNull(value);
 }
 
+export function isActivityValid(activity) {
+  return isNotEmptyString(activity);
+}
+
+export function validateActivities(activities) {
+  return activities.every(isActivityValid);
+}
+
+function isNotEmptyString(value) {
+  return isString(value) || value.length < 0;
+}
 function isSelectOptionValid({ value, label }) {
   return ({ value, label }) => isNumber(value) && isString(label);
 }

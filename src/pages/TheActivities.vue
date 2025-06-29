@@ -1,7 +1,14 @@
 <script setup>
 import ActivityItem from '@/components/ActivityItem.vue';
+import { validateActivities } from '@/validators.js';
 
-const activities = ['coding', 'reading', 'training'];
+defineProps({
+  activities: {
+    required: true,
+    type: Array,
+    validator: validateActivities,
+  },
+});
 </script>
 
 <template>
@@ -11,5 +18,3 @@ const activities = ['coding', 'reading', 'training'];
     </ul>
   </div>
 </template>
-
-<style scoped></style>
