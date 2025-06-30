@@ -4,7 +4,7 @@ import TheNav from '@/components/TheNav.vue';
 import TheTimeline from '@/pages/TheTimeline.vue';
 import TheActivities from '@/pages/TheActivities.vue';
 import TheProgress from '@/pages/TheProgress.vue';
-import { ACTIVITIES, PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE } from '@/constants.js';
+import { PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE } from '@/constants.js';
 import { ref } from 'vue';
 import {
   generateActivitySelectOptions,
@@ -19,7 +19,13 @@ function goTo(page) {
   currentPage.value = page;
 }
 
-const activitySelectOptions = generateActivitySelectOptions(ACTIVITIES);
+const activities = ref(['Coding', 'Reading', 'Training']);
+
+const activitySelectOptions = generateActivitySelectOptions(activities.value);
+
+function deleteActivity(activity) {
+  activities.value.splice(activities.value.indexOf(activity), 1);
+}
 </script>
 
 <template>
@@ -30,7 +36,11 @@ const activitySelectOptions = generateActivitySelectOptions(ACTIVITIES);
       :activity-select-options="activitySelectOptions"
       :timeline-items="timelineItems"
     />
-    <TheActivities v-show="currentPage === PAGE_ACTIVITIES" :activities="ACTIVITIES" />
+    <TheActivities
+      v-show="currentPage === PAGE_ACTIVITIES"
+      :activities="activities"
+      @delete-activity="deleteActivity"
+    />
     <TheProgress v-show="currentPage === PAGE_PROGRESS" />
   </main>
   <TheNav :current-page="currentPage" @navigate="goTo($event)" />
