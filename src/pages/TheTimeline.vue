@@ -8,6 +8,10 @@ defineProps({
     required: true,
     validator: isTimeLineItemsValid,
   },
+  activitySelectOptions: {
+    type: Array,
+    required: true,
+  },
 });
 </script>
 
@@ -18,6 +22,7 @@ defineProps({
         v-for="timelineItem in timelineItems"
         :key="timelineItem.hour"
         :timeline-item="timelineItem"
+        :activity-select-options="activitySelectOptions"
       />
     </ul>
   </div>

@@ -39,7 +39,7 @@ function isNotEmptyString(value) {
   return isString(value) || value.length < 0;
 }
 function isSelectOptionValid({ value, label }) {
-  return ({ value, label }) => isNumber(value) && isString(label);
+  return isNumber(value) && isNotEmptyString(label);
 }
 
 export function isUndefinedOrNull(value) {

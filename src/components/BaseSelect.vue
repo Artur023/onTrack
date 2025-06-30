@@ -15,7 +15,6 @@ const props = defineProps({
   options: {
     type: Array,
     required: true,
-    validator: validateSelectOptions,
   },
 });
 const emit = defineEmits({

@@ -1,6 +1,7 @@
 <script setup>
 import ActivityItem from '@/components/ActivityItem.vue';
 import { validateActivities } from '@/validators.js';
+import { ACTIVITIES } from '@/constants.js';
 
 defineProps({
   activities: {
@@ -9,13 +10,12 @@ defineProps({
     validator: validateActivities,
   },
 });
-
 </script>
 
 <template>
   <div>
     <ul class="divide-y">
-      <ActivityItem v-for="activity in activities" :key="activity" :activity="activity" />
+      <ActivityItem v-for="activity in ACTIVITIES" :key="activity" :activity="activity" />
     </ul>
   </div>
 </template>
