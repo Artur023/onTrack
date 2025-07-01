@@ -23,3 +23,4 @@ export function generateTimelineItems() {
 export function generateActivitySelectOptions(activities) {
   return activities.map((label, value) => ({ label, value }));
 }
+
