@@ -27,8 +27,8 @@ function deleteActivity(activity) {
   activities.value.splice(activities.value.indexOf(activity), 1);
 }
 
-function createActivity(newActivity) {
-  activities.value.push(newActivity);
+function createActivity(activity) {
+  activities.value.push(activity);
 }
 </script>
 
