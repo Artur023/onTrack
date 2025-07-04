@@ -29,22 +29,12 @@ export function id() {
 }
 
 export function generateActivities() {
-  return [
-    {
+  return ['Coding', 'Training', 'Reading'].map((name, hours) => {
+    return {
       id: id(),
-      name: 'Coding',
-      secondsToComplete: 0 * SECONDS_IN_HOUR,
-    },
-    {
-      id: id(),
-      name: 'Training',
-      secondsToComplete: 1 * SECONDS_IN_HOUR,
-    },
-    {
-      id: id(),
-      name: 'Reading',
-      secondsToComplete: 2 * SECONDS_IN_HOUR,
-    },
-  ];
+      name,
+      secondsToComplete: hours * SECONDS_IN_HOUR,
+    };
+  });
 }
 
