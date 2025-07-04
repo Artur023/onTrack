@@ -7,8 +7,10 @@ import TheProgress from '@/pages/TheProgress.vue';
 import { PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE } from '@/constants.js';
 import { ref } from 'vue';
 import {
+  generateActivities,
   generateActivitySelectOptions,
   generateTimelineItems,
+  id,
   normalizePageHash,
 } from '@/functions.js';
 
@@ -19,7 +21,7 @@ function goTo(page) {
   currentPage.value = page;
 }
 
-const activities = ref(['Coding', 'Reading', 'Training']);
+const activities = ref(generateActivities());
 
 const activitySelectOptions = generateActivitySelectOptions(activities.value);
 
@@ -27,8 +29,12 @@ function deleteActivity(activity) {
   activities.value.splice(activities.value.indexOf(activity), 1);
 }
 
-function createActivity(activity) {
-  activities.value.push(activity);
+function createActivity(name) {
+  activities.value.push({
+    id: id(),
+    name: name,
+    secondsToComplete: 0,
+  });
 }
 </script>
 
