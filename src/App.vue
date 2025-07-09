@@ -13,7 +13,7 @@ import {
   normalizePageHash,
 } from '@/functions.js';
 
-const timelineItems = generateTimelineItems();
+const timelineItems = ref(generateTimelineItems());
 const currentPage = ref(normalizePageHash());
 
 function goTo(page) {
@@ -27,6 +27,12 @@ const activitySelectOptions = computed(() => {
 });
 
 function deleteActivity(activity) {
+  timelineItems.value.forEach((timelineItem) => {
+    if (timelineItem.activityId === activity.id) {
+      timelineItem.activityId = null;
+    }
+  });
+
   activities.value.splice(activities.value.indexOf(activity), 1);
 }
 
@@ -35,7 +41,7 @@ function createActivity(activity) {
 }
 
 function setTimelineItemActivity({ timelineItem, activity }) {
-  timelineItem.activityId = activity.id;
+  timelineItem.activityId = activity?.id || null;
 }
 </script>
 

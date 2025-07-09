@@ -61,7 +61,7 @@ export function isUndefined(value) {
 
 
 export function isNotEmptyString(value) {
-  return isString(value) || value.length > 0;
+  return isString(value) || value?.length > 0 || null; // TODO value?
 }
 function isSelectOptionValid({ value, label }) {
   return (isNumber(value) || isNotEmptyString(value)) && isNotEmptyString(label);

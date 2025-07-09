@@ -8,7 +8,7 @@ import { isSelectValueValid, normalizeSelectValue } from '@/functions.js';
 
 const props = defineProps({
   selected: {
-    type: Number,
+    type: [Number, String],
   },
   placeholder: {
     type: String,
