@@ -35,13 +35,6 @@ export function validateActivities(activities) {
   return activities.every(isActivityValid);
 }
 
-function isNotEmptyString(value) {
-  return isString(value) || value.length > 0;
-}
-function isSelectOptionValid({ value, label }) {
-  return (isNumber(value) || isNotEmptyString(value)) && isNotEmptyString(label);
-}
-
 export function isUndefinedOrNull(value) {
   return isUndefined(value) || isNull(value);
 }
@@ -66,4 +59,11 @@ export function isUndefined(value) {
   return value === undefined;
 }
 
+
+export function isNotEmptyString(value) {
+  return isString(value) || value.length > 0;
+}
+function isSelectOptionValid({ value, label }) {
+  return (isNumber(value) || isNotEmptyString(value)) && isNotEmptyString(label);
+}
 

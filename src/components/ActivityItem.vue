@@ -16,7 +16,7 @@ defineProps({
 const emit = defineEmits({
   delete: isUndefined,
 });
-const secondsToComplete = ref(null);
+const secondsToComplete = ref(0);
 </script>
 
 <template>

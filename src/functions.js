@@ -1,5 +1,5 @@
 import { HOURS_IN_DAY, MIDNIGHT_HOUR, PAGE_TIMELINE, SECONDS_IN_HOUR } from '@/constants.js';
-import { isPageValid } from '@/validators.js';
+import { isNotEmptyString, isNull, isNumberOrNull, isPageValid } from '@/validators.js';
 
 export function normalizePageHash() {
   const page = window.location.hash.slice(1);
@@ -36,5 +36,13 @@ export function generateActivities() {
       secondsToComplete: hours * SECONDS_IN_HOUR,
     };
   });
+}
+
+export function normalizeSelectValue(value) {
+  return isNaN(value) || isNull(value) ? value : +value;
+}
+
+export function isSelectValueValid(value) {
+  return isNotEmptyString(value) || isNumberOrNull(value);
 }
 

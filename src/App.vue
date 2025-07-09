@@ -5,7 +5,7 @@ import TheTimeline from '@/pages/TheTimeline.vue';
 import TheActivities from '@/pages/TheActivities.vue';
 import TheProgress from '@/pages/TheProgress.vue';
 import { PAGE_ACTIVITIES, PAGE_PROGRESS, PAGE_TIMELINE } from '@/constants.js';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import {
   generateActivities,
   generateActivitySelectOptions,
@@ -22,7 +22,9 @@ function goTo(page) {
 
 const activities = ref(generateActivities());
 
-const activitySelectOptions = generateActivitySelectOptions(activities.value);
+const activitySelectOptions = computed(() => {
+  return generateActivitySelectOptions(activities.value);
+});
 
 function deleteActivity(activity) {
   activities.value.splice(activities.value.indexOf(activity), 1);
