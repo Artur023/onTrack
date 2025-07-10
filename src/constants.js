@@ -30,4 +30,5 @@ export const PERIOD_SELECT_OPTIONS = [
     label: '03:00',
   },
 ];
+export const NULLABLE_ACTIVITY = { id: null };
 

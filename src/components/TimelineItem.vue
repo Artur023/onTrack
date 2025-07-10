@@ -5,9 +5,9 @@ import {
   isTimeLineItemValid,
   validateActivities,
   validateSelectOptions,
-  isNull,
 } from '@/validators.js';
 import TimelineHour from '@/components/TimelineHour.vue';
+import { NULLABLE_ACTIVITY } from '@/constants.js';
 
 const props = defineProps({
   timelineItem: {
@@ -27,18 +27,15 @@ const props = defineProps({
   },
 });
 const emit = defineEmits({
-  selectActivity(activity) {
-    return isNull(activity) || isActivityValid(activity);
-  },
+  selectActivity: isActivityValid,
 });
 
+function findActivityById(id) {
+  return props.activities.find((activity) => activity.id === id) || NULLABLE_ACTIVITY;
+}
+
 function selectActivity(id) {
-  emit(
-    'selectActivity',
-    props.activities.find((activity) => {
-      return activity.id === id;
-    }) || null,
-  );
+  emit('selectActivity', findActivityById(id));
 }
 </script>
 
